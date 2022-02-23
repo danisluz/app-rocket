@@ -13,7 +13,12 @@ export class ProductCreateComponent implements OnInit {
 
   constructor(private router: Router, private productService: ProductService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.product = {
+      name: '',
+      price: null
+    }
+  }
 
   createProduct(): void {
     this.productService.create(this.product).subscribe(() => {

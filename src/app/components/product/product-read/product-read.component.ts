@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Product } from '../product.model';
 import { ProductService } from '../product.service';
 
@@ -8,17 +9,28 @@ import { ProductService } from '../product.service';
   styleUrls: ['./product-read.component.scss']
 })
 export class ProductReadComponent implements OnInit {
-
   products: Product[] = [];
   displayedColumns = ['id', 'name', 'price', 'actions']
 
-  constructor( private _productService: ProductService) { }
+  constructor( private productService: ProductService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this._productService.read().subscribe(products => {
+    this.productsInilize();
+  }
+
+  productsInilize(): void {
+    this.productService.read().subscribe(products => {
       this.products = products
       console.log(products)
     })
+  }
+
+  deleteProduct(id: number): void {
+    console.log("Delete", id);
+    this.productService.delete(id).subscribe(() => {
+      this.productsInilize();
+      this.productService.showMensage("Produto excluido!", 3000);
+    });
   }
 
 }

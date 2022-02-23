@@ -16,6 +16,7 @@ i {
 
 .delete > i {
   color: gray;
+  cursor: pointer;
   &:hover {
     color: red;
   }

@@ -25,7 +25,7 @@
         <a class="edit" routerLink="/product/update/{{ row.id }}">
           <i class="material-icons">edit</i>
         </a>
-        <a class="delete" routerLink="/">
+        <a class="delete" (click)="deleteProduct(row.id)">
           <i class="material-icons">delete</i>
         </a>
       </td>

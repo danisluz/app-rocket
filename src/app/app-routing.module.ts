@@ -6,6 +6,7 @@ import { CrudProductComponent } from "./views/crud-product/crud-product.componen
 import { ProductCreateComponent } from "./components/product/product-create/product-create.component";
 import { ProductUpdateComponent } from "./components/product/product-update/product-update.component";
 
+
 const routes: Routes = [
   { path: "", component: HomeComponent },
   { path: "products", component: CrudProductComponent },
