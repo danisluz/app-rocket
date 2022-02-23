@@ -10,7 +10,6 @@ import { ProductService } from "../product.service";
 })
 export class ProductUpdateComponent implements OnInit {
   product: Product;
-  numeroMagico: number;
 
   constructor(
     private router: Router,
@@ -26,12 +25,6 @@ export class ProductUpdateComponent implements OnInit {
       });
     }
 
-    this.numeroMagico = 2;
-  }
-
-
-  somaNumero(): void {
-    this.product.price += this.product.price * 0.1;
   }
 
   updateProduct(): void {
