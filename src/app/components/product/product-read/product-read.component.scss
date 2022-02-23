@@ -1,0 +1,29 @@
+table {
+  width: 100%;
+  margin-top: 15px;
+}
+
+i {
+  margin: 0 0 0 20px; 
+}
+
+.edit > i {
+  color: gray;
+  &:hover {
+    color: blue;
+  }
+}
+
+.delete > i {
+  color: gray;
+  &:hover {
+    color: red;
+  }
+}
+
+tr {
+    background-color: transparent;
+    &:hover {
+        background-color: rgb(232, 232, 232);
+    }
+}

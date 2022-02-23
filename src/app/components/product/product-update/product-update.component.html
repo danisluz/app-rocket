@@ -1,0 +1,29 @@
+<mat-card>
+  <mat-card-title>Alterar Produto</mat-card-title>
+  <form>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Nome"
+        [(ngModel)]="product.name"
+        name="name"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Preço (R$)"
+        [(ngModel)]="product.price"
+        name="price"
+      />
+    </mat-form-field>
+  </form>
+
+  <h3>{{ numeroMagico }}</h3>
+  <button mat-raised-button color="primary" (click)="updateProduct()">
+    Alterar
+  </button>
+  <button mat-raised-button (click)="cancel()">Cancelar</button>
+
+  <button mat-raised-button color="primary" (click)="somaNumero()">Soma mais um</button>
+</mat-card>

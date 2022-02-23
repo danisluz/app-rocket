@@ -1,0 +1,26 @@
+$main-color: lightgray;
+$second-color: #3c3c3c;
+
+.header {
+  background-color: $main-color;
+  border-bottom: solid 1px gray;
+}
+.header .logo {
+  max-height: 36px;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.title {
+  padding-left: 0.2rem;
+  text-decoration: none;
+  color: $second-color;
+  display: block;
+  cursor: pointer;
+}
+
+.v-middle {
+  vertical-align: middle;
+}
+

@@ -1,0 +1,25 @@
+.app-footer {
+    position: absolute;
+    bottom: 0;
+    max-height: 2.3rem;
+    z-index: 2;
+}
+
+.flex-end {
+	justify-content: flex-end;
+}
+
+span {
+    font-size: 0.7em;
+    font-weight: 200;
+}
+
+.v-middle {
+    vertical-align: middle;
+}
+
+.red {
+    color: lightcoral;
+}
+
+
